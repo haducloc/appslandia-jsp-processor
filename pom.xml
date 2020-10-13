@@ -26,7 +26,7 @@
 		<version.maven-plugin-annotations>3.6.0</version.maven-plugin-annotations>
 		<version.maven-plugin-api>3.6.1</version.maven-plugin-api>
 
-		<version.junit>4.12</version.junit>
+		<version.junit>4.13.1</version.junit>
 	</properties>
 
 	<licenses>
