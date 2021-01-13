@@ -34,7 +34,7 @@ import org.apache.maven.plugins.annotations.Parameter;
  * @author <a href="mailto:haducloc13@gmail.com">Loc Ha</a>
  *
  */
-@Mojo(name = "process", defaultPhase = LifecyclePhase.GENERATE_SOURCES, threadSafe = true)
+@Mojo(name = "process-jsp", defaultPhase = LifecyclePhase.GENERATE_SOURCES)
 public class JspProcessorMojo extends AbstractMojo {
 
 	@Parameter(property = "skip", defaultValue = "false")
@@ -71,8 +71,7 @@ public class JspProcessorMojo extends AbstractMojo {
 		getLog().info("minimize: " + this.minimize);
 
 		try {
-			new JspProcessor(this.webContentDir.getAbsolutePath()).minimize(this.minimize).jspDir(this.jspDir).genDirName(this.genDirName).pageEncoding(this.pageEncoding)
-					.process();
+			new JspProcessor(this.webContentDir.getAbsolutePath()).minimize(this.minimize).jspDir(this.jspDir).genDirName(this.genDirName).pageEncoding(this.pageEncoding).process();
 
 		} catch (Exception ex) {
 			throw new MojoExecutionException(ex.getMessage(), ex);

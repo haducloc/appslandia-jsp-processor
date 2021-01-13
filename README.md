@@ -85,7 +85,7 @@
 					<id>process-jsp</id>
 					<phase>generate-sources</phase>
 					<goals>
-						<goal>process</goal>
+						<goal>process-jsp</goal>
 					</goals>
 				</execution>
 			</executions>
